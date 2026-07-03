@@ -79,3 +79,4 @@
 ---
 
 ## 4. Repository Structure
+<img width="1017" height="671" alt="image" src="https://github.com/user-attachments/assets/caaf4669-30eb-4a34-99ac-f41dc9d7c841" />
