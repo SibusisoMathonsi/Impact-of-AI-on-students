@@ -1,70 +1,81 @@
-# Data Project Documentation Template
+# Impact of AI on Students: Analyzing Academic Performance and AI Adoption Trends
+> *Analyzed a dataset of 14,000+ students to determine how Generative AI usage patterns, proficiency, and institutional policies correlate with academic performance, assignment satisfaction, and stress levels.*
 
-A production-ready GitHub template for documenting data analysis, SQL, dashboard, pipeline, and machine learning projects - with built-in examples, narrative guidance, and adaptable structure.
+---
 
-## What This Is
+## ⚙️ Project Type Flags
+- [x] Exploratory Data Analysis (EDA)
+- [x] SQL Analysis / Querying
+- [ ] Dashboard / Data Visualization
+- [ ] Data Pipeline / ETL
+- [ ] Predictive Modelling / Machine Learning
+- [x] Data Cleaning / Wrangling
+- [ ] End-to-End (multiple of the above)
 
-This is a **cloneable template repository** designed to help data analysts, scientists, and engineers document their projects the way senior practitioners do - with clarity, structure, and storytelling.
+---
 
-Every section includes:
-- Plain-language instructions on what to write
-- Examples of strong vs. weak documentation  
-- Guidance on when to keep or delete a section
+## Table of Contents
+1. [Project Overview](#1-project-overview)
+2. [Objectives](#2-objectives)
+3. [Project Scope & Tools](#3-project-scope--tools)
+4. [Repository Structure](#4-repository-structure)
+5. [Data Workflow](#5-data-workflow)
+6. [Data Model & Schema](#6-data-model--schema)
+7. [ERD - Entity Relationship Diagram](#7-erd--entity-relationship-diagram)
+8. [Analysis & Metrics](#8-analysis--metrics)
+9. [Key Insights](#9-key-insights)
+10. [Recommendations](#10-recommendations)
+11. [Assumptions & Limitations](#11-assumptions--limitations)
+12. [Future Enhancements](#12-future-enhancements)
+13. [Deliverables](#13-deliverables)
+14. [Author](#14-author)
 
-It works for **any kind of data project:**
-- SQL analysis
-- Python / R exploratory analysis
-- Dashboards (Tableau, Power BI, Looker)
-- Data pipelines / ETL workflows
-- Machine learning / predictive modeling
-- Mixed-method projects
+---
 
-## Why This Exists
+## 1. Project Overview
 
-After hundreds of portfolio reviews, the pattern was clear: **the projects that stand out aren't always the most technically sophisticated - they're the ones where the README tells a clear story.**
+**Context:** Universities are currently grappling with how Generative AI affects student learning. While some institutions are banning AI tools, others are actively encouraging them, but data on how these policies actually impact student outcomes is scarce.
 
-Most data professionals never learn how to document their work. This template fixes that.
+**Problem Statement:** Educational institutions need to understand whether Generative AI usage is acting as a tool for academic enhancement or a shortcut that negatively impacts learning, and how institutional policies affect student well-being.
 
-## How to Use It
+**Approach:** I analyzed a comprehensive dataset of over 14,000 student records using MySQL. I utilized SQL aggregations, CTEs, and Window Functions to track AI usage hours, segment primary use cases (e.g., Ideation vs. Direct Answer Generation), and compare pre- and post-semester GPAs across different academic majors.
 
-1. Click **"Use this template"** (green button at the top)
-2. Name your new repo after your actual project
-3. Copy the contents of `README_TEMPLATE.md` into your new project's README
-4. Delete folders and sections you don't need
-5. Remove all placeholder text and comments before publishing
+**Outcome:** The analysis revealed distinct correlations between how students use AI (proficiency and use case) and their academic outcomes. It also highlighted that institutional AI policies significantly impact student stress levels, providing actionable data for university administrators to refine their academic integrity guidelines.
 
-Full walkthrough: [HOW_TO_USE.md](HOW_TO_USE.md)
+---
 
-## What's Inside
+## 2. Objectives
 
-The template includes:
-- **README_TEMPLATE.md** - The fill-in-the-blank documentation template
-- **project_metadata.yml** - Optional machine-readable metadata
-- **Complete folder structure** - Pre-built folders for data, notebooks, scripts, queries, reports, visuals, and docs
-- **.gitignore** - Pre-configured to exclude data files
+- **Primary Objective:** Quantify the relationship between weekly GenAI usage hours and changes in student academic performance (Pre-Semester vs. Post-Semester GPA).
+- **Secondary Objective 1:** Identify the most common primary use cases for GenAI across different academic majors and year of study.
+- **Secondary Objective 2:** Evaluate how different institutional AI policies (e.g., "Allowed with Citation" vs. "Strict Ban") impact student stress levels and assignment satisfaction scores.
 
-## Who This Is For
+> 💡 *Every SQL query and analytical decision in this project traces back to one of these objectives.*
 
-- **Beginners** building their first portfolio project
-- **Early-career analysts** cleaning up existing projects
-- **Career switchers** who have technical skills but need to frame their work
-- **Experienced practitioners** who want a consistent structure
+---
 
-## Features
+## 3. Project Scope & Tools
 
-✅ Section-by-section guidance with examples  
-✅ Supports SQL, Python, R, dashboards, pipelines, ML  
-✅ Includes ERD section for SQL projects  
-✅ Pre-built .gitignore for data projects  
-✅ Optional YAML metadata for portfolio automation  
-✅ Delete-what-you-don't-use philosophy  
+### Scope
 
-## License
+| Dimension | Details |
+|-----------|---------|
+| **In Scope** | 14,000+ student records covering demographics, AI usage metrics (hours, tools, proficiency), academic performance (GPA, satisfaction), and institutional policies. |
+| **Out of Scope** | Longitudinal tracking beyond a single semester; qualitative interview data; actual LMS (Canvas/Blackboard) login data. |
+| **Time Period** | Single semester snapshot (2023/2024 academic year). |
+| **Granularity** | Row-level data representing individual student survey responses and self-reported metrics. |
 
-MIT License - use this however you want.
+### Tools & Technologies
 
-## Credits
+| Category | Tool(s) Used |
+|----------|-------------|
+| Data Storage | MySQL (Relational Database) |
+| Data Processing | SQL (Querying, Aggregations, CTEs, Window Functions) |
+| Analysis | Custom SQL scripts for descriptive statistics and segmentation |
+| Visualization | GitHub Markdown (Data storytelling) |
+| Version Control | Git / GitHub |
+| Documentation | Markdown |
 
-Created by **Issy BI**
+---
 
-If this helped you, consider starring the repo or sharing it with someone building their data portfolio.
+## 4. Repository Structure
